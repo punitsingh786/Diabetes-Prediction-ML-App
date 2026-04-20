@@ -17,8 +17,15 @@ if "input_data" not in st.session_state:
     st.session_state.input_data = None
 
 # ------------------ LOAD MODEL ------------------
-model = pickle.load(open("../model/model.pkl", "rb"))
-scaler = pickle.load(open("../model/scaler.pkl", "rb"))
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+model_path = os.path.join(BASE_DIR, "model", "model.pkl")
+scaler_path = os.path.join(BASE_DIR, "model", "scaler.pkl")
+
+model = pickle.load(open(model_path, "rb"))
+scaler = pickle.load(open(scaler_path, "rb"))
 
 # ------------------ SIDEBAR ------------------
 st.sidebar.title("🧠 Diabetes AI")
