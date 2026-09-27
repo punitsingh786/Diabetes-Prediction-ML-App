@@ -43,7 +43,7 @@ if page == "🏠 Home":
     - Interactive UI  
 
     ### 🧠 Model Used
-    - Random Forest Classifier  
+    - XGBOOST  
 
     ### 📊 Input Parameters
     - Glucose, BMI, Age, Blood Pressure, etc.
@@ -51,7 +51,7 @@ if page == "🏠 Home":
 
     col1, col2, col3 = st.columns(3)
     col1.metric("Accuracy", "86%")
-    col2.metric("Model", "Random Forest")
+    col2.metric("Model", "XGBOOST")
     col3.metric("Dataset Size", "768")
 
     st.success("👉 Go to Prediction tab to try the model")
